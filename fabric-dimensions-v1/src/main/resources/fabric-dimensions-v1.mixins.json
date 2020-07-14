@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.fabricmc.fabric.mixin.dimension",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinDimension"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
