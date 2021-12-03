@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "package": "net.legacyfabric.fabric.mixin.content.registries",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BlockAccessor",
+    "BlockEntityAccessor",
+    "EntityTypeAccessor",
+    "ItemAccessor",
+    "MixinEnchantmentHelper",
+    "MixinFurnaceBlockEntity",
+    "MixinItemStack",
+    "MixinLivingEntity",
+    "MixinPlayerEntity",
+    "MixinServerPlayerInteractionManager",
+    "MixinWorld",
+    "MutableRegistryAccessor",
+    "SimpleRegistryAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "client.MixinScreen",
+    "client.MixinCreativeInventoryScreen"
+  ]
+}

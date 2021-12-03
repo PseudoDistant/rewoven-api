@@ -1,3 +1,4 @@
 # Keybindings
 api.keybinding.testTranslationKey=Test Keybinding
 legacyfabric.api.youreTesting=You're Testing Fabric API!
+item.testmod:testitem.name=Test Item
