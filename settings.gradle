@@ -1,11 +1,22 @@
 pluginManagement {
 	repositories {
-		gradlePluginPortal()
 		maven {
 			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
+		gradlePluginPortal()
+		maven {
+			name = 'Jitpack'
+			url = 'https://jitpack.io'
+		}
 		mavenLocal()
+	}
+	resolutionStrategy {
+		eachPlugin {
+			if (requested.id.id == "fabric-loom" && requested.version?.endsWith("-SNAPSHOT") != true) {
+				useModule("com.github.Chocohead.Fabric-Loom:fabric-loom:${requested.version}")
+			}
+		}
 	}
 }
 
@@ -27,13 +38,13 @@ addModule("base", "rewoven-api-base")
 addModule("resources", "rewoven-resource-loader-v1")
 addModule("client", "rendering", "rewoven-rendering-api-v1")
 addModule("client", "keybindings", "rewoven-keybinding-api-v1")
-addModule("networking", "rewoven-networking-api-v1")
+//addModule("networking", "rewoven-networking-api-v1")
 addModule("crash-report-info", "rewoven-crash-report-info-v1")
-addModule("lifecycle-events", "rewoven-lifecycle-events-v1")
+//addModule("lifecycle-events", "rewoven-lifecycle-events-v1")
 addModule("entity-events", "rewoven-entity-events-v1")
-addModule("server", "vanilla-commands", "rewoven-vanilla-command-api-v1")
-addModule("server", "sponge-commands", "rewoven-sponge-command-api-v2")
-addModule("server", "permissions", "rewoven-permissions-api-v1")
-addModule("server", "gamerules", "rewoven-gamerule-api-v1")
+//addModule("server", "vanilla-commands", "rewoven-vanilla-command-api-v1")
+//addModule("server", "sponge-commands", "rewoven-sponge-command-api-v2")
+//addModule("server", "permissions", "rewoven-permissions-api-v1")
+//addModule("server", "gamerules", "rewoven-gamerule-api-v1")
 
 include("testmods")

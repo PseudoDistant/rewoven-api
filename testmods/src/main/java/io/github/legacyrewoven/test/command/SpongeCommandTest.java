@@ -18,15 +18,15 @@
 
 package io.github.legacyrewoven.test.command;
 
-import io.github.legacyrewoven.api.command.v2.CommandRegistrar;
+//import io.github.legacyrewoven.api.command.v2.CommandRegistrar;
 
 import net.fabricmc.api.ModInitializer;
 
 public class SpongeCommandTest implements ModInitializer {
 	@Override
 	public void onInitialize() {
-		CommandRegistrar.EVENT.register((manager, dedicated) -> {
+		/*CommandRegistrar.EVENT.register((manager, dedicated) -> {
 			ModMetadataCommand.register(manager);
-		});
+		});*/
 	}
 }

@@ -18,9 +18,9 @@
 
 package io.github.legacyrewoven.test.client;
 
-import io.github.legacyrewoven.api.client.event.lifecycle.v1.ClientChunkEvents;
-import io.github.legacyrewoven.api.client.event.lifecycle.v1.ClientEntityEvents;
-import io.github.legacyrewoven.api.client.event.lifecycle.v1.ClientLifecycleEvents;
+//import io.github.legacyrewoven.api.client.event.lifecycle.v1.ClientChunkEvents;
+//import io.github.legacyrewoven.api.client.event.lifecycle.v1.ClientEntityEvents;
+//import io.github.legacyrewoven.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -43,7 +43,7 @@ public class ClientLifecycleEventsTest implements ClientModInitializer {
 				LOGGER.info("Client chunk unloaded at {} {}", chunk.chunkX, chunk.chunkZ);
 			}
 		});*/
-		ClientEntityEvents.ENTITY_LOAD.register((entity, world) -> {
+		/*ClientEntityEvents.ENTITY_LOAD.register((entity, world) -> {
 			//LOGGER.info("Client Entity {} loaded", EntityType.getEntityName(entity));
 		});
 		ClientEntityEvents.ENTITY_UNLOAD.register((entity, world) -> {
@@ -54,6 +54,6 @@ public class ClientLifecycleEventsTest implements ClientModInitializer {
 		});
 		ClientLifecycleEvents.CLIENT_STOPPING.register(client -> {
 			LOGGER.info("Client stopping");
-		});
+		});*/
 	}
 }

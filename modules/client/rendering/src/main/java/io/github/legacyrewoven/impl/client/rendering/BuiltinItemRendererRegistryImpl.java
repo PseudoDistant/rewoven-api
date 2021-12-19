@@ -46,7 +46,8 @@ public final class BuiltinItemRendererRegistryImpl implements BuiltinItemRendere
 		Objects.requireNonNull(renderer, "Renderer is null");
 
 		if (RENDERERS.putIfAbsent(item, renderer) != null) {
-			throw new IllegalArgumentException("Item " + Item.REGISTRY.method_9839(item) + " already has a builtin renderer!");
+			//TODO: Item Registry unmapped and scary
+			//throw new IllegalArgumentException("Item " + Item.REGISTRY.method_9839(item) + " already has a builtin renderer!");
 		}
 	}
 

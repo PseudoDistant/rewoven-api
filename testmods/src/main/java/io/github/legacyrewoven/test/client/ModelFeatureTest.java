@@ -24,6 +24,6 @@ import net.fabricmc.api.ClientModInitializer;
 public class ModelFeatureTest implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		System.out.println("Lole no features in 1.7");
+		System.out.println("Lole no features in 1.6");
 	}
 }

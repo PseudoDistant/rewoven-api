@@ -18,9 +18,9 @@
 
 package io.github.legacyrewoven.test;
 
-import io.github.legacyrewoven.api.event.lifecycle.v1.ServerChunkEvents;
+/*import io.github.legacyrewoven.api.event.lifecycle.v1.ServerChunkEvents;
 import io.github.legacyrewoven.api.event.lifecycle.v1.ServerEntityEvents;
-import io.github.legacyrewoven.api.event.lifecycle.v1.ServerLifecycleEvents;
+import io.github.legacyrewoven.api.event.lifecycle.v1.ServerLifecycleEvents;*/
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -43,7 +43,7 @@ public class ServerLifecycleEventsTest implements ModInitializer {
 				LOGGER.info("Server chunk unloaded at {} {}", chunk.chunkX, chunk.chunkZ);
 			}
 		});*/
-		ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> {
+		/*ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> {
 			//LOGGER.info("Server Entity {} loaded", EntityType.getEntityName(entity));
 		});
 		ServerEntityEvents.ENTITY_UNLOAD.register((entity, world) -> {
@@ -60,6 +60,6 @@ public class ServerLifecycleEventsTest implements ModInitializer {
 		});
 		ServerLifecycleEvents.SERVER_STOPPED.register(server -> {
 			LOGGER.info("Server stopped");
-		});
+		});*/
 	}
 }

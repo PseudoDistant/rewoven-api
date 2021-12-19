@@ -20,8 +20,8 @@ package io.github.legacyrewoven.test;
 
 import java.util.Arrays;
 
-import io.github.legacyrewoven.api.networking.v1.S2CPlayChannelEvents;
-import io.github.legacyrewoven.api.networking.v1.ServerPlayConnectionEvents;
+//import io.github.legacyrewoven.api.networking.v1.S2CPlayChannelEvents;
+//import io.github.legacyrewoven.api.networking.v1.ServerPlayConnectionEvents;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,7 +32,7 @@ public class ServerNetworkingTest implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		S2CPlayChannelEvents.REGISTER.register((handler, sender, server, channels) -> {
+		/*S2CPlayChannelEvents.REGISTER.register((handler, sender, server, channels) -> {
 			LOGGER.info("Registered channels (S2C callback) - " + Arrays.toString(channels.toArray()));
 		});
 		S2CPlayChannelEvents.UNREGISTER.register((handler, sender, server, channels) -> {
@@ -46,6 +46,6 @@ public class ServerNetworkingTest implements ModInitializer {
 		});
 		ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
 			LOGGER.info("Connection disconnected (S2C)");
-		});
+		});*/
 	}
 }
