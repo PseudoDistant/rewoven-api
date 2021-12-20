@@ -38,7 +38,7 @@ public class ReloadableResourceManagerImplMixin {
 	@Final
 	private List<ResourceReloadListener> listeners;
 
-	@Inject(method = "reload", at = @At(value = "INVOKE", remap = false, target = "Lorg/apache/logging/log4j/Logger;info(Ljava/lang/String;)V"))
+	@Inject(method = "reload", at = @At(value = "INVOKE", remap = false, target = "Lnet/minecraft/class_1555;method_5331(Ljava/lang/String;)V"))
 	public void onReload(List<ResourcePack> resourcePacks, CallbackInfo ci) {
 		ResourceManagerHelperImpl.getInstance().sort(this.listeners);
 	}

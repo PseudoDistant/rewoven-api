@@ -36,12 +36,12 @@ public class ServerChunkCacheMixin {
 	@Shadow
 	private ServerWorld world;
 
-	@Inject(method = "method_2128", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/chunk/ChunkWriter;method_1442(Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V"))
+	@Inject(method = "method_2128", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/chunk/ChunkStorage;writeChunk(Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V"))
 	public void chunkUnload(Chunk chunk, CallbackInfo ci) {
 		ServerChunkEvents.CHUNK_UNLOAD.invoker().onChunkUnload(this.world, chunk);
 	}
 
-	@Inject(method = "method_2129", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/chunk/ChunkWriter;method_1441(Lnet/minecraft/world/World;II)Lnet/minecraft/world/chunk/Chunk;"), locals = LocalCapture.CAPTURE_FAILEXCEPTION)
+	@Inject(method = "method_2129", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/chunk/ChunkStorage;loadChunk(Lnet/minecraft/world/World;II)Lnet/minecraft/world/chunk/Chunk;"), locals = LocalCapture.CAPTURE_FAILEXCEPTION)
 	public void chunkLoad(int i, int j, CallbackInfoReturnable<Chunk> cir, Chunk chunk) {
 		ServerChunkEvents.CHUNK_LOAD.invoker().onChunkLoad(this.world, chunk);
 	}
