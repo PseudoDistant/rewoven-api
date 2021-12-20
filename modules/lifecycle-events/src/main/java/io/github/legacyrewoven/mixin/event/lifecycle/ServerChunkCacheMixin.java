@@ -29,9 +29,9 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.chunk.ServerChunkCache;
+import net.minecraft.world.chunk.ServerChunkProvider;
 
-@Mixin(ServerChunkCache.class)
+@Mixin(ServerChunkProvider.class)
 public class ServerChunkCacheMixin {
 	@Shadow
 	private ServerWorld world;
