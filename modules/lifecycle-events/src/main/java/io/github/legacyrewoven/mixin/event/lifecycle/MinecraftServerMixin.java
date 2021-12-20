@@ -66,7 +66,7 @@ public abstract class MinecraftServerMixin {
 		ServerLifecycleEvents.SERVER_STARTING.invoker().onServerStarting((MinecraftServer) (Object) this);
 	}
 
-	@Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/server/MinecraftServer;setServerMeta(Lnet/minecraft/server/ServerMetadata;)V", shift = At.Shift.AFTER), method = "run")
+	@Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/server/MinecraftServer;getTimeMillis()J", ordinal = 0, shift = At.Shift.AFTER), method = "run")
 	public void afterServerStart(CallbackInfo ci) {
 		ServerLifecycleEvents.SERVER_STARTED.invoker().onServerStarted((MinecraftServer) (Object) this);
 	}
