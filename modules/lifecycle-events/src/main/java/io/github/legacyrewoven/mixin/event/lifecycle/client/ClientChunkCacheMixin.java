@@ -44,9 +44,9 @@ public abstract class ClientChunkCacheMixin {
 	@Shadow
 	public abstract Chunk getChunk(int i, int j);
 
-	@Inject(at = @At("RETURN"), method = "method_3120")
-	public void chunkUnload(int i, int j, CallbackInfo ci) {
-		ClientChunkEvents.CHUNK_UNLOAD.invoker().onChunkUnload((ClientWorld) this.world, this.getChunk(i, j));
+	@Inject(at = @At("RETURN"), method = "method_1220")
+	public void chunkUnload(int x, int z, CallbackInfo ci) {
+		ClientChunkEvents.CHUNK_UNLOAD.invoker().onChunkUnload((ClientWorld) this.world, this.getChunk(x, z));
 	}
 
 	@Inject(at = @At("RETURN"), method = "method_8913", locals = LocalCapture.CAPTURE_FAILEXCEPTION)
