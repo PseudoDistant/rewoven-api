@@ -18,23 +18,23 @@
 
 package io.github.legacyrewoven.test.command;
 
-import io.github.legacyrewoven.api.command.v2.lib.sponge.CommandException;
-import io.github.legacyrewoven.api.command.v2.lib.sponge.CommandManager;
-import io.github.legacyrewoven.api.command.v2.lib.sponge.CommandResult;
-import io.github.legacyrewoven.api.command.v2.lib.sponge.args.CommandContext;
-import io.github.legacyrewoven.api.command.v2.lib.sponge.args.GenericArguments;
-import io.github.legacyrewoven.api.command.v2.lib.sponge.spec.CommandSpec;
-import io.github.legacyrewoven.api.permission.v1.PermissibleCommandSource;
+//import io.github.legacyrewoven.api.command.v2.lib.sponge.CommandException;
+//import io.github.legacyrewoven.api.command.v2.lib.sponge.CommandManager;
+//import io.github.legacyrewoven.api.command.v2.lib.sponge.CommandResult;
+//import io.github.legacyrewoven.api.command.v2.lib.sponge.args.CommandContext;
+//import io.github.legacyrewoven.api.command.v2.lib.sponge.args.GenericArguments;
+//import io.github.legacyrewoven.api.command.v2.lib.sponge.spec.CommandSpec;
+//import io.github.legacyrewoven.api.permission.v1.PermissibleCommandSource;
 
-import net.minecraft.class_2432;
-import net.minecraft.text.ClickEvent;
-import net.minecraft.text.LiteralText;
+//import net.minecraft.class_2432;
+//import net.minecraft.text.ClickEvent;
+//import net.minecraft.text.LiteralText;
 
 import net.fabricmc.loader.api.ModContainer;
 import net.fabricmc.loader.api.metadata.ContactInformation;
 
 public class ModMetadataCommand {
-	public static void register(CommandManager manager) {
+	/*public static void register(CommandManager manager) {
 		manager.register(
 				CommandSpec.builder()
 						.arguments(GenericArguments.mod(new LiteralText("modid")))
@@ -74,5 +74,5 @@ public class ModMetadataCommand {
 		builder.append("Metadata Type: ".concat(container.getMetadata().getType()).concat("\n"));
 		source.sendMessage(builder);
 		return CommandResult.success();
-	}
+	}*/
 }

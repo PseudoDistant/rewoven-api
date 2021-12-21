@@ -43,10 +43,10 @@ public class EntityEventsTest implements ModInitializer {
 			LOGGER.info("Player went from dim {} to dim {}", origin.dimension.getName(), destination.dimension.getName());
 		});
 		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, world, alive) -> {
-			LOGGER.info("Player {} respawned", newPlayer.getGameProfile().getName());
+			//LOGGER.info("Player {} respawned", newPlayer.getGameProfile().getName());
 		});
 		ServerPlayerEvents.COPY_FROM.register((oldPlayer, newPlayer, alive) -> {
-			LOGGER.info("{} player data is being copied", newPlayer.getGameProfile().getName());
+			//LOGGER.info("{} player data is being copied", newPlayer.().getName());
 		});
 	}
 }

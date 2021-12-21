@@ -43,12 +43,12 @@ public class MinecraftClientMixin {
 		ClientTickEvents.END_CLIENT_TICK.invoker().onEndTick((MinecraftClient) (Object) this);
 	}
 
-	@Inject(at = @At(value = "INVOKE", target = "Lorg/apache/logging/log4j/Logger;info(Ljava/lang/String;)V", shift = At.Shift.AFTER, remap = false), method = "stop")
+	@Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/class_1555;method_5331(Ljava/lang/String;)V", shift = At.Shift.AFTER, remap = false), method = "stop")
 	private void onStopping(CallbackInfo ci) {
 		ClientLifecycleEvents.CLIENT_STOPPING.invoker().onClientStopping((MinecraftClient) (Object) this);
 	}
 
-	@Inject(at = @At(value = "RETURN"), method = "method_9147")
+	@Inject(at = @At(value = "RETURN"), method = "initializeGame")
 	private void onStart(CallbackInfo ci) {
 		ClientLifecycleEvents.CLIENT_STARTED.invoker().onClientStarted((MinecraftClient) (Object) this);
 	}

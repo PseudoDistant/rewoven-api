@@ -66,7 +66,7 @@ public abstract class MinecraftServerMixin {
 		ServerLifecycleEvents.SERVER_STARTING.invoker().onServerStarting((MinecraftServer) (Object) this);
 	}
 
-	@Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/server/MinecraftServer;setServerMeta(Lnet/minecraft/server/ServerMetadata;)V", shift = At.Shift.AFTER), method = "run")
+	@Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/server/MinecraftServer;getTimeMillis()J", ordinal = 0, shift = At.Shift.AFTER), method = "run")
 	public void afterServerStart(CallbackInfo ci) {
 		ServerLifecycleEvents.SERVER_STARTED.invoker().onServerStarted((MinecraftServer) (Object) this);
 	}
@@ -78,7 +78,7 @@ public abstract class MinecraftServerMixin {
 		}
 	}
 
-	@Inject(at = @At(value = "TAIL"), method = "method_6466")
+	@Inject(at = @At(value = "TAIL"), method = "method_2980")
 	public void serverWorldLoad(CallbackInfo ci) {
 		for (ServerWorld world : this.worlds) {
 			ServerWorldEvents.LOAD.invoker().onWorldLoad((MinecraftServer) (Object) this, world);

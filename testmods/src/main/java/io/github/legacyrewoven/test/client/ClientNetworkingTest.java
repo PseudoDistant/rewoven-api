@@ -20,8 +20,8 @@ package io.github.legacyrewoven.test.client;
 
 import java.util.Arrays;
 
-import io.github.legacyrewoven.api.client.networking.v1.C2SPlayChannelEvents;
-import io.github.legacyrewoven.api.client.networking.v1.ClientPlayConnectionEvents;
+//import io.github.legacyrewoven.api.client.networking.v1.C2SPlayChannelEvents;
+//import io.github.legacyrewoven.api.client.networking.v1.ClientPlayConnectionEvents;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,7 +32,7 @@ public class ClientNetworkingTest implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		C2SPlayChannelEvents.REGISTER.register((handler, sender, client, channels) -> {
+		/*C2SPlayChannelEvents.REGISTER.register((handler, sender, client, channels) -> {
 			LOGGER.info("Registered channels (C2S callback) - " + Arrays.toString(channels.toArray()));
 		});
 		C2SPlayChannelEvents.UNREGISTER.register((handler, sender, client, channels) -> {
@@ -46,6 +46,6 @@ public class ClientNetworkingTest implements ClientModInitializer {
 		});
 		ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
 			LOGGER.info("Connection disconnected (C2S)");
-		});
+		});*/
 	}
 }
